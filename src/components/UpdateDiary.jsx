@@ -65,8 +65,9 @@ return (
         <table class={style.form}>
             <tr><th colSpan={2}>Updated Form</th></tr><br />
             <tr><td>Date:</td><td><input type="date" value={date} onChange={(e)=>{setDate(e.target.value)}}/></td></tr>
-            <tr><td>Description:</td>
-            <td><textarea class={style.in} value={description}onChange={(e) =>{setDescription(e.target.value);}}rows={1} required/></td>
+            <tr><td>Description:</td></tr>
+            <tr>
+                <th colSpan={2}><textarea class={style.in} value={description}onChange={(e) =>{setDescription(e.target.value);}}rows={1} required/></th>
             </tr>
             <tr><th colSpan={2}><button onClick={updateDiary}>Update</button></th></tr>
         </table>

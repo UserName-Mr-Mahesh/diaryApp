@@ -57,8 +57,9 @@ const CreateDiary = () => {
     <div class={style.login}>
         <table class={style.form}>
             <tr><td>Data:</td><td><input type="date" value={date} onChange={(e)=>{setDate(e.target.value)}} required/></td></tr>
-            <tr><td>Description:</td>
-                <td><textarea class={style.in} value={description}onChange={(e) =>{setDescription(e.target.value);handleTextareaChange(e);}}rows={1} required/></td>
+            <tr><td>Description:</td></tr>
+            <tr>
+                <th colSpan={2}><textarea class={style.in} value={description}onChange={(e) =>{setDescription(e.target.value);handleTextareaChange(e);}}rows={1} required/></th>
             </tr>
             <tr><th colSpan={2}><button onClick={saveDiary}>Submit</button></th></tr>
         </table>

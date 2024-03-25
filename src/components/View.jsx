@@ -21,23 +21,18 @@ const View = () => {
                     <tr>
                         <td>Data:</td>
                         <td>
-                            <input type="text" value={date} readOnly />
+                          <input type="text" value={date} readOnly />
                         </td>
                     </tr>
-                    <tr>
-                        <td>Description:</td>
-                        <td>
-                            <textarea
-                                className={style.in}
-                                value={description}
-                                onChange={(e) => {}}
-                                readOnly
-                            />
-                        </td>
+                    <tr><td>Description:</td></tr>
+                    <tr> 
+                      <th colSpan={2}> 
+                        <textarea className={style.in} value={description} onChange={(e) => {}} readOnly />
+                      </th>
                     </tr>
                     <tr>
                         <td colSpan={2}>
-                            <button onClick={() => navigate('/userHome')}>Menu</button>
+                          <button onClick={() => navigate('/userHome')}>Menu</button>
                         </td>
                     </tr>
                 </tbody>
