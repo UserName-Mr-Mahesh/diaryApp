@@ -7,8 +7,8 @@ const Register = () => {
     const[email,setEmail]=useState("")
     const[psd,setPsd]=useState("")
     const navigate=useNavigate()
+
     const reg=()=>{
-        // e.preventDefault();
         let payload={name,email,psd};
         axios.post(`https://65f6cf7bfec2708927c9c7af.mockapi.io/user`,payload)
         .then(()=>{
@@ -20,6 +20,7 @@ const Register = () => {
         alert(err);
         })
     }
+    
   return (
     <div class={style.login}>
         <table class={style.form}>

@@ -8,6 +8,7 @@ const Home = () => {
   let user=JSON.parse(localStorage.getItem("currentUser"));
   const [selectedDescription, setSelectedDescription] = useState(null);
   const navigate=useNavigate();
+
     useEffect(()=>{
       axios.get(`https://65f6cf7bfec2708927c9c7af.mockapi.io/user/${user.id}`)
       .then(response => {
@@ -23,6 +24,7 @@ const Home = () => {
     const handleViewClick = (description) => {
       setSelectedDescription(description);
     }
+
     const deleteDiaryEntry = (diaryId) => {
       axios.get(`https://65f6cf7bfec2708927c9c7af.mockapi.io/user/${user.id}`)
           .then(response => {
@@ -40,6 +42,7 @@ const Home = () => {
               alert(err);
           });
   };
+  
   const logOut=()=>{
     localStorage.clear();
     navigate('/')

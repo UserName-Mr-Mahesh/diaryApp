@@ -6,6 +6,7 @@ const Login = () => {
     const[email,setEmail]=useState("")
     const[psd,setPsd]=useState("")
     const navigate=useNavigate()
+
     const verify=(e)=>{
         e.preventDefault();
         axios.get(`https://65f6cf7bfec2708927c9c7af.mockapi.io/user?email=${email}&psd=${psd}`)
@@ -24,6 +25,7 @@ const Login = () => {
         alert("Invalid user name")
         })
     }
+    
   return (
     <div class={style.login}>
         <table class={style.form}>

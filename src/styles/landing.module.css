@@ -5,7 +5,6 @@
     align-items: center;
     justify-content: space-evenly;
     background-color: rgb(218, 214, 214);
-
 }
 .landing>div{
     height: 80vh;
@@ -14,7 +13,6 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    /* padding: 5%; */
 }
 .body{
     width: 50%;
@@ -22,26 +20,17 @@
 .login{
     width: 70%;
 }
-/* @media (max-width: 769px) {
-
-    
-} */
-
 @media (max-width: 769px) {
     .landing{
-        display: block;
+        align-items: start;
     }
-
-.landing>div{
-    height: auto;
-    width: 98%;
-    background-color: rgb(218, 214, 214);
-    border-radius: 10px;
-    display: block;
-    padding: 5px 0 20px 0;
-}
-.login {
-    width: 100%;
-    background-color: red;
- }
+    .landing>div{
+        height: auto;
+        width: 95%;
+        display: block;
+        padding: 5px 0 20px 0;
+    }
+    .login {
+        width: 100%;
+    }
 }

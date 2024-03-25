@@ -11,7 +11,6 @@ const CreateDiary = () => {
     const saveDiary = () => {
         const payload = { date, description };
         // Check if date and description are provided
-
         if (!date || !description) {
             alert("Please provide both date and description");
             return;
@@ -20,21 +19,17 @@ const CreateDiary = () => {
         axios.get(`https://65f6cf7bfec2708927c9c7af.mockapi.io/user/${user.id}`)
             .then(response => {
                 const userData = response.data;
-
                 // Check if the provided date already exists
                 const existingEntry = userData.diary.find(entry => entry.date === date);
                 if (existingEntry) {
                     alert("A diary entry with the same date already exists");
                     return;
                 }
-                
                 // Generate a unique ID for the new diary entry
                 const newDiaryEntryId = userData.diary.length > 0 ? userData.diary[userData.diary.length - 1].id + 1 : 1;
-    
                 // Add the new diary entry with generated ID
                 const newDiaryEntry = { id: newDiaryEntryId, ...payload };
                 userData.diary.push(newDiaryEntry);
-    
                 // Update the user data with the modified diary array
                 return axios.put(`https://65f6cf7bfec2708927c9c7af.mockapi.io/user/${user.id}`, userData);
             })

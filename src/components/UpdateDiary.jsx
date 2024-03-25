@@ -8,6 +8,7 @@ const UpdateDiary = () => {
     const [date,setDate]=useState();
     const [description,setDescription]=useState();
     const user=JSON.parse(localStorage.getItem('currentUser'))
+
     useEffect((e)=>{
         axios.get(`https://65f6cf7bfec2708927c9c7af.mockapi.io/user/${user.id}`)
     .then(response => {
@@ -60,6 +61,7 @@ useEffect(() => {
     textarea.style.height = 'auto'; // Reset height to auto to recalculate scrollHeight
     textarea.style.height = `${textarea.scrollHeight}px`; // Set the height to scrollHeight
 }, [description]);
+
 return (
     <div class={style.login}>
         <table class={style.form}>

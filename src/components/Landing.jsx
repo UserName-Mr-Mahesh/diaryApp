@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import Login from "./Login";
 import style from '../styles/landing.module.css'
 import Body from "./Body";
