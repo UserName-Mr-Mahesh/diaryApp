@@ -1,23 +1,49 @@
-import React from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
-import style from '../styles/createDiary.module.css'
+import React, { useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import style from '../styles/createDiary.module.css';
 
 const View = () => {
-    const location=useLocation();
-    const date=location.state.date;
-    const description=location.state.description;
-    const navigate =useNavigate()
-  return (
-    <div class={style.login}>
-        <table class={style.form}>
-            <tr><td>Data:</td><td><input type="" value={date}/></td></tr>
-            <tr><td>Description:</td>
-                <td><textarea class={style.in} value={description}/></td>
-            </tr>
-            <tr><th colSpan={2}><button onClick={()=>{navigate('/userHome')}}>Menu</button></th></tr>
-        </table>
-    </div>
-  )
-}
+    const location = useLocation();
+    const date = location.state.date;
+    const description = location.state.description;
+    const navigate = useNavigate();
 
-export default View
+    useEffect(() => {
+        const textarea = document.querySelector(`.${style.in}`);
+        textarea.style.height = 'auto'; // Reset height to auto to recalculate scrollHeight
+        textarea.style.height = `${textarea.scrollHeight}px`; // Set the height to scrollHeight
+    }, [description]);
+
+    return (
+        <div className={style.login}>
+            <table className={style.form}>
+                <tbody>
+                    <tr>
+                        <td>Data:</td>
+                        <td>
+                            <input type="text" value={date} readOnly />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Description:</td>
+                        <td>
+                            <textarea
+                                className={style.in}
+                                value={description}
+                                onChange={(e) => {}}
+                                readOnly
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colSpan={2}>
+                            <button onClick={() => navigate('/userHome')}>Menu</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    );
+};
+
+export default View;

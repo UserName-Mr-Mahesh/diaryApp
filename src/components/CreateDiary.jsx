@@ -7,18 +7,7 @@ const CreateDiary = () => {
     const [description,setDescription]=useState();
     const user=JSON.parse(localStorage.getItem("currentUser"));
     const navigate=useNavigate();
-    // const saveDiary=()=>{
-    //     const payload={date,description}
-    //     axios.post(`https://65f6cf7bfec2708927c9c7af.mockapi.io/user/1/diary`,payload)
-    //     .then((res)=>{
-    //         console.log(res.data);
-    //         alert("Diary has been added");
-    //         // navigate("/home")
-    //     })
-    //     .catch((err)=>{
-    //         alert(err);
-    //     })
-    // }
+
     const saveDiary = () => {
         const payload = { date, description };
         // Check if date and description are provided

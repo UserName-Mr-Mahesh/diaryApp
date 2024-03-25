@@ -55,18 +55,18 @@ const UpdateDiary = () => {
         });
 };
 
-const handleTextareaChange = (e) => {
-    const textarea = e.target;
-    textarea.style.height = "auto"; // Reset height to auto to recalculate scrollHeight
+useEffect(() => {
+    const textarea = document.querySelector(`.${style.in}`);
+    textarea.style.height = 'auto'; // Reset height to auto to recalculate scrollHeight
     textarea.style.height = `${textarea.scrollHeight}px`; // Set the height to scrollHeight
-}
-  return (
+}, [description]);
+return (
     <div class={style.login}>
         <table class={style.form}>
             <tr><th colSpan={2}>Updated Form</th></tr><br />
             <tr><td>Date:</td><td><input type="date" value={date} onChange={(e)=>{setDate(e.target.value)}}/></td></tr>
             <tr><td>Description:</td>
-            <td><textarea class={style.in} value={description}onChange={(e) =>{setDescription(e.target.value);handleTextareaChange(e);}}rows={1} required/></td>
+            <td><textarea class={style.in} value={description}onChange={(e) =>{setDescription(e.target.value);}}rows={1} required/></td>
             </tr>
             <tr><th colSpan={2}><button onClick={updateDiary}>Update</button></th></tr>
         </table>

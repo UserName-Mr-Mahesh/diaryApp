@@ -30,7 +30,7 @@ const Login = () => {
             <tr><th colSpan={2}>User Login</th></tr><br />
             <tr><td>Email:</td><td><input type="text" placeholder='Enter Email' value={email} onChange={(e)=>{setEmail(e.target.value)}}/></td></tr><br />
             <tr><td>Password:</td><td><input type="password" placeholder='Enter Password' value={psd} onChange={(e)=>{setPsd(e.target.value)}}/></td></tr><br />
-            <tr><th><button  onClick={verify}>Submit</button></th><th><Link to="/register">click here to Register</Link></th></tr>
+            <tr><th><button  onClick={verify}>Submit</button></th><th>click here to  <Link to="/register">Register</Link></th></tr>
         </table>
     </div>
   )

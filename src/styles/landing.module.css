@@ -4,11 +4,12 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    background-color: rgb(218, 214, 214);
+
 }
 .landing>div{
     height: 80vh;
-    width: 70%;
-    background-color: rgb(218, 214, 214);
+    /* width: 70%; */
     border-radius: 10px;
     display: flex;
     align-items: center;

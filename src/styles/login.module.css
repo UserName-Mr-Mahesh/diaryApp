@@ -28,7 +28,7 @@
     outline: none;
 }
 .form td{
-    text-shadow: 4px 6px 3px black;
+    /* text-shadow: 4px 6px 3px black; */
 }
 .form button{
     cursor: pointer;
@@ -40,4 +40,8 @@
 }
 .form a{
     text-decoration: none;
+    color: red;
+}
+.form a::visited{
+    color: green;
 }

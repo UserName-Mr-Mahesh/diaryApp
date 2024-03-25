@@ -17,8 +17,8 @@ const UserHome = () => {
             <Body class={style.body}/>
             <Routes class={style.login}>
                 <Route path='/' element={<Home/>}  />
-                <Route path="/login" element={<Login/>}/>
-                <Route path="/register" element={<Register/>}/>
+                {/* <Route path="/login" element={<Login/>}/>
+                <Route path="/register" element={<Register/>}/> */}
                 <Route path="/createDiary" element={<CreateDiary/>}/>
                 <Route path="/updateDiary" element={<UpdateDiary/>}/>
                 <Route path="/viewDiary" element={<View/>}/>
