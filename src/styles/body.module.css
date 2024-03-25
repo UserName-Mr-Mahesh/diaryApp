@@ -2,7 +2,7 @@
     width: 100%;
     /* height: 100vh; */
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     padding: 10px;
 }
@@ -17,18 +17,13 @@ img{
     height: 300px;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (max-width: 769px) {
     .image{
          /* height: 100vh; */
-         padding: 20px;
+         /* padding: 20px; */
          /* display: none; */
     }
-    .image>div{
-        /* border: 1px solid black; */
-        /* background-color: rgb(218, 214, 214); */
-        padding: 10px;
-        border-radius: 10px;
-    }
+    
     img{
         width: 100%;
         height: 200px;

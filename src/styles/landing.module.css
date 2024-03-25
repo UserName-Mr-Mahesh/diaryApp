@@ -9,7 +9,7 @@
 }
 .landing>div{
     height: 80vh;
-    /* width: 70%; */
+    width: 70%;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -28,10 +28,13 @@
 } */
 
 @media (max-width: 769px) {
+    .landing{
+        display: block;
+    }
 
 .landing>div{
     height: auto;
-    width: 80%;
+    width: 98%;
     background-color: rgb(218, 214, 214);
     border-radius: 10px;
     display: block;

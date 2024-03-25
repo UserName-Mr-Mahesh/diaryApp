@@ -18,6 +18,9 @@ const View = () => {
         <div className={style.login}>
             <table className={style.form}>
                 <tbody>
+                  <tr>
+                    <th colSpan={2}>Diary Data</th>
+                  </tr>
                     <tr>
                         <td>Data:</td>
                         <td>
