@@ -4,6 +4,14 @@
   align-items: center;
   justify-content: center;
 }
+.form{
+  padding: 10px;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  box-shadow: 2px 2px 2px black;
+  border-radius: 10px;
+}
+
 .form input{
   padding: 3px;
   border: none;
@@ -12,7 +20,7 @@
   outline: none;
 }
 .form td{
-  text-shadow: 4px 6px 3px black;
+  text-shadow: 1px 1px 1px black;
 }
 .form button{
   cursor: pointer;
@@ -42,4 +50,10 @@
 }
 .in::-webkit-scrollbar{
   width: 0px;
+}
+h3{
+  width: 100%;
+  text-decoration: underline;
+  padding: 10px;
+  letter-spacing: 3px;
 }

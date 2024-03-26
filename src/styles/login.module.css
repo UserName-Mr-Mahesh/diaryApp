@@ -24,8 +24,8 @@
     background-color: transparent;
 }
 .form a{
-    text-decoration: none;
-    color: red;
+    color: blue;
+    text-decoration: underline;
 }
 .form a:visited{
     color: green;

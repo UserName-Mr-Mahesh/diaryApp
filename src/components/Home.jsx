@@ -51,11 +51,11 @@ const Home = () => {
   return (
     <div class={style.home}>
       <table class={style.form}>
-        <tr><th>Date</th><th colSpan={3}>Description</th></tr>
+        <tr><th><h2> Date</h2></th><th colSpan={3}><h2>Description</h2></th></tr>
         {data.map((e)=>
           (
             <tr>
-              <td>{e.date}</td> 
+              <td><b>{e.date}</b></td> 
               <td>
                   <button onClick={() => {navigate("/userHome/viewDiary",{replace:true,state:{date:e.date,description:e.description}})}}>View</button>
                   {selectedDescription === e.description && <p>{e.description}</p>}
@@ -67,7 +67,7 @@ const Home = () => {
           )
         )}
         <br />
-        <tr><th colSpan={2}><button><Link to='/userHome/createDiary'>Add New Diary</Link></button></th> <th colSpan={4}><button onClick={logOut}>Log Out</button></th></tr>
+        <tr><th colSpan={2}><button class={style.add}><Link to='/userHome/createDiary'>Add New Diary</Link></button></th> <th colSpan={4}><button onClick={logOut} class={style.logout}>Log Out</button></th></tr>
       </table>
         
     </div>

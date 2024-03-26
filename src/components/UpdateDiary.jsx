@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import style from '../styles/createDiary.module.css'
 const UpdateDiary = () => {
     const location = useLocation();
@@ -8,7 +8,7 @@ const UpdateDiary = () => {
     const [date,setDate]=useState();
     const [description,setDescription]=useState();
     const user=JSON.parse(localStorage.getItem('currentUser'))
-
+    const navigate =useNavigate();
     useEffect((e)=>{
         axios.get(`https://65f6cf7bfec2708927c9c7af.mockapi.io/user/${user.id}`)
     .then(response => {
@@ -71,7 +71,7 @@ return (
             <tr>
                 <th colSpan={2}><textarea class={style.in} value={description}onChange={(e) =>{setDescription(e.target.value);}}rows={1} required/></th>
             </tr>
-            <tr><th colSpan={2}><button onClick={updateDiary}>Update</button></th></tr>
+            <tr><td><button onClick={() => navigate('/userHome')}>Menu</button></td><th><button onClick={updateDiary}>Update</button></th></tr>
         </table>
     </div>
   )

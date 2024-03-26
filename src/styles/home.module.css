@@ -6,11 +6,15 @@
 }
 .form{
     padding: 20px;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    box-shadow: 2px 2px 2px black;
+    /* border: 1px solid black; */
     border-radius: 10px;
 }
 td{
     padding: 10px;
+    /* text-shadow: 3px 4px 4px black; */
 }
 button{
     cursor: pointer;
@@ -19,11 +23,22 @@ button{
     box-shadow: 2px 2px 2px black;
     background-color: transparent;
 }
+h2{
+    text-decoration: underline;
+}
 a{
     text-decoration: none;
+    color: white;
+}
+.add{
+    background-color: green;
+}
+.logout{
+    color: white;
+    background-color: red;
 }
 @media screen and (max-width: 769px) {
     .form{
-        padding: 10px 0px;
+        padding: 10px 10px 20px 0px;
     } 
 }

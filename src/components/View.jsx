@@ -18,7 +18,7 @@ const View = () => {
     <div className={style.login}>
       <table className={style.form}>
         <tbody>
-          <tr><th colSpan={2}>Diary Data</th></tr>
+          <tr><th colSpan={2}><h3>Diary Data</h3></th></tr>
           <tr><td>Data:</td><td><input type="text" value={date} readOnly /></td></tr>
           <tr><td>Description:</td></tr>
           <tr><th colSpan={2}><textarea className={style.in} value={description} onChange={(e) => {}} readOnly /></th></tr>
