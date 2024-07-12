@@ -18,7 +18,8 @@ const UpdateDiary = () => {
             console.log(diaryEntry);
             setDate(diaryEntry.date)
             setDescription(diaryEntry.description)
-        } else {
+        }
+         else {
             console.log("Diary entry not found");
         }
     })
@@ -35,7 +36,7 @@ const UpdateDiary = () => {
             const diaryIndex = userData.diary.findIndex(entry => entry.id === id);
             if (diaryIndex !== -1) {
                 // Update the diary entry with the new date and description
-                userData.diary[diaryIndex].date = date;
+                //userData.diary[diaryIndex].date = date;
                 userData.diary[diaryIndex].description = description;
                 
                 // Send a PUT request to update the user's data
@@ -66,7 +67,7 @@ return (
     <div class={style.login}>
         <table class={style.form}>
             <tr><th colSpan={2}>Updated Form</th></tr><br />
-            <tr><td>Date:</td><td><input type="date" value={date} onChange={(e)=>{setDate(e.target.value)}}/></td></tr>
+            <tr><td>Date:</td><td><input type="date" value={date} readOnly/*onChange={(e)=>{setDate(e.target.value)}}*//></td></tr>
             <tr><td>Description:</td></tr>
             <tr>
                 <th colSpan={2}><textarea class={style.in} value={description}onChange={(e) =>{setDescription(e.target.value);}}rows={1} required/></th>
